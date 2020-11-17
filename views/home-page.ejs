@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page</title>
+</head>
+<body>
+    <% result.forEach(ele=>{%>
+        <div style="border:5px solid rgb(238, 96, 96); padding: 15px;margin: 15px; width:max-content; ">
+        <h1><%= ele.type%></h1>
+        <p><%= ele.text%></p>
+  
+  <!-- hidden input form to adding to database -->
+  <form action="/facts" method="post">
+
+    <input hidden type="text" value="<%= ele.type%>" name="type" >
+    <input hidden type="text" value="<%= ele.text%>" name="text" >
+    <input type="submit" value="add to fact">
+
+</form>
+</div>
+<%  });%>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fav fact</title>
+</head>
+<body>
+    
+    
+
+     <%result.forEach(ele=>{%>
+    <div style="border:5px solid rgb(238, 96, 96); padding: 15px;margin: 15px; width:max-content; ">
+        <h1>Type: <%= ele.types%></h1>
+        <p> Text:<%= ele.texts%></p>
+        <a href="/facts/<%= ele.id%>">show more</a> <br>
+    </div>
+    <% });%> 
+</body>
+
+</html>

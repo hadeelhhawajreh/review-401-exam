@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>detalis</title>
+</head>
+<body>
+    <form action="/facts/<%=res.id%>?_method=PUT" method="post">
+        <fieldset>
+            <legend> form</legend>
+        <input  type="text" value="<%= res.types%>" name="type" >
+        <input  type="text" value="<%= res.texts%>" name="text" >
+        <br><br>
+        <input type="submit" value="update">
+        <br><br>
+    </form>
+    <form action="/facts/<%=res.id%>?_method=DELETE" method="post">
+      
+        <input type="submit" value="delete">
+    </fieldset>
+    </form>
+</body>
+</html>
